@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: spuerkeess-dev-trigger
+  namespace: spuerkeess-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: spuerkeess-dev-triggerbinding
+  template:
+    ref: spuerkeess-dev-triggertemplate

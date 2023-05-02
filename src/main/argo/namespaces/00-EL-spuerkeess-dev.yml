@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: spuerkeess-dev-eventlistener
+  namespace: spuerkeess-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: spuerkeess-dev-trigger

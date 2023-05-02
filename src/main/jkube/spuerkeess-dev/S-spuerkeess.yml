@@ -1,0 +1,12 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  namespace: {{ocp-namespace}}
+  name: spuerkeess-secret-0
+  labels:
+    app: spuerkeess    
+stringData:  
+  actuator.password: {{actuator.password}}
+type: Opaque
+---
+ 
